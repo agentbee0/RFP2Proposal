@@ -1,44 +1,201 @@
 # Case Studies — Past performance and project references
 # Used in: Past performance section (2-3 matched per proposal)
-# Tip: Add relevance_tags to help the plugin match studies to RFP industries
-# Run /setup-org for interactive setup or edit this file directly
 
 case_studies:
-  # - project_name: "Healthcare Data Platform"
-  #   client_name: "Major US Hospital Network"
-  #   client_agency: ""                    # For government clients
-  #   contract_number: ""
-  #   contract_type: "T&M"                 # FFP, T&M, CPFF, CPIF
-  #   contract_value: "$2.5M"
-  #   period_of_performance:
-  #     start: "2024-01"
-  #     end: "2024-09"
-  #   project_description: >
-  #     Built a unified patient data platform integrating 12 legacy systems
-  #     into a modern microservices architecture with real-time analytics.
-  #   technologies_used:
-  #     - "React"
-  #     - "Node.js"
-  #     - "AWS"
-  #     - "PostgreSQL"
-  #     - "HIPAA-compliant infrastructure"
-  #   team_size: 12
-  #   key_outcomes:
-  #     - metric: "Data retrieval time"
-  #       result: "40% reduction"
-  #     - metric: "System uptime"
-  #       result: "99.99%"
-  #     - metric: "Compliance"
-  #       result: "Full HIPAA compliance achieved"
-  #   relevance_tags:                      # Used for RFP matching
-  #     - "healthcare"
-  #     - "data platform"
-  #     - "HIPAA"
-  #     - "microservices"
-  #     - "legacy modernization"
-  #   reference_contact:
-  #     name: ""
-  #     title: ""
-  #     email: ""
-  #     phone: ""
-  #   cpars_rating: ""                     # If applicable (Exceptional, Very Good, etc.)
+  - project_name: "Enterprise Data Lake & Analytics Platform"
+    client_name: "U.S. Department of Veterans Affairs"
+    client_agency: "Veterans Benefits Administration (VBA)"
+    contract_number: "VA701-20-C-0187"
+    contract_type: "FFP"
+    contract_value: "$7.4M"
+    period_of_performance:
+      start: "2020-09"
+      end: "2023-03"
+    project_description: >
+      Designed and built a cloud-native data lake on AWS GovCloud consolidating 18 disparate
+      legacy data sources for the Veterans Benefits Administration. Delivered a self-service
+      analytics platform with Tableau dashboards enabling VBA analysts to reduce claims
+      processing research time by 52%. The solution was FedRAMP-authorized and achieved
+      ATO in under 90 days.
+    technologies_used:
+      - "AWS GovCloud (S3, Glue, Athena, Redshift)"
+      - "Tableau"
+      - "Python"
+      - "Apache Spark"
+      - "Terraform"
+      - "FedRAMP-compliant infrastructure"
+    team_size: 18
+    key_outcomes:
+      - metric: "Claims processing research time"
+        result: "52% reduction"
+      - metric: "Data sources consolidated"
+        result: "18 legacy systems integrated"
+      - metric: "Time to ATO"
+        result: "87 days (vs. agency average of 210 days)"
+      - metric: "System uptime"
+        result: "99.97% over 30-month period"
+      - metric: "Cost savings"
+        result: "$1.2M annual reduction vs. prior on-premises infrastructure"
+    relevance_tags:
+      - "federal government"
+      - "data analytics"
+      - "cloud migration"
+      - "AWS GovCloud"
+      - "FedRAMP"
+      - "healthcare data"
+      - "legacy modernization"
+    reference_contact:
+      name: "Marcus Delgado"
+      title: "COR / Program Director, VBA IT"
+      email: "marcus.delgado@va.gov"
+      phone: "(202) 461-7823"
+    cpars_rating: "Exceptional"
+
+  - project_name: "Zero Trust Architecture Implementation"
+    client_name: "U.S. Department of Homeland Security"
+    client_agency: "Cybersecurity and Infrastructure Security Agency (CISA)"
+    contract_number: "70RSAT22C00089"
+    contract_type: "T&M"
+    contract_value: "$5.1M"
+    period_of_performance:
+      start: "2022-04"
+      end: "2024-04"
+    project_description: >
+      Led a full Zero Trust Architecture (ZTA) modernization program for CISA aligned with
+      NIST SP 800-207 and OMB M-22-09. Delivered identity-centric security controls across
+      14,000+ endpoints, deployed a next-gen SIEM, and implemented continuous authorization
+      workflows replacing legacy perimeter-based defenses. Conducted workforce training
+      reaching 3,200 personnel across 6 regional offices.
+    technologies_used:
+      - "Okta Workforce Identity"
+      - "Palo Alto Prisma Access"
+      - "CrowdStrike Falcon"
+      - "Splunk SIEM"
+      - "BeyondTrust PAM"
+      - "Microsoft Azure AD"
+    team_size: 22
+    key_outcomes:
+      - metric: "Mean time to detect (MTTD)"
+        result: "Reduced from 11 days to 4.2 hours"
+      - metric: "Endpoints under ZTA controls"
+        result: "14,200 (100% of scope)"
+      - metric: "Unauthorized access incidents"
+        result: "68% reduction year-over-year"
+      - metric: "Personnel trained"
+        result: "3,200 across 6 regional offices"
+      - metric: "Compliance posture"
+        result: "Full alignment with M-22-09 achieved on schedule"
+    relevance_tags:
+      - "cybersecurity"
+      - "zero trust"
+      - "federal government"
+      - "NIST 800-207"
+      - "identity management"
+      - "SIEM"
+      - "DHS"
+    reference_contact:
+      name: "Patricia Okonkwo"
+      title: "Contracting Officer Representative, CISA"
+      email: "patricia.okonkwo@cisa.dhs.gov"
+      phone: "(703) 235-5190"
+    cpars_rating: "Exceptional"
+
+  - project_name: "Healthcare Claims Processing Modernization"
+    client_name: "BluePeak Health Systems"
+    client_agency: ""
+    contract_number: "BPHS-2021-IT-004"
+    contract_type: "FFP"
+    contract_value: "$3.8M"
+    period_of_performance:
+      start: "2021-06"
+      end: "2022-12"
+    project_description: >
+      Re-platformed a monolithic claims adjudication system serving 2.3 million members
+      into a microservices architecture on Azure. Implemented an AI-powered claims
+      auto-adjudication engine that reduced manual review workload by 41% and improved
+      accuracy rates. Full HIPAA compliance was maintained throughout with zero data breaches.
+    technologies_used:
+      - "Microsoft Azure"
+      - "Python / FastAPI"
+      - "React"
+      - "PostgreSQL"
+      - "Apache Kafka"
+      - "Docker / Kubernetes"
+      - "HIPAA-compliant infrastructure"
+    team_size: 15
+    key_outcomes:
+      - metric: "Claims auto-adjudication rate"
+        result: "Increased from 54% to 79%"
+      - metric: "Manual review workload"
+        result: "41% reduction"
+      - metric: "Claims processing cycle time"
+        result: "Reduced from 12 days to 4.5 days"
+      - metric: "System availability"
+        result: "99.95% uptime post-go-live"
+      - metric: "HIPAA compliance audits"
+        result: "Zero findings across 2 annual audits"
+    relevance_tags:
+      - "healthcare"
+      - "HIPAA"
+      - "microservices"
+      - "AI/ML"
+      - "legacy modernization"
+      - "Azure"
+      - "commercial"
+    reference_contact:
+      name: "Sandra Whittaker"
+      title: "VP of Information Technology, BluePeak Health Systems"
+      email: "s.whittaker@bluepeakhealth.com"
+      phone: "(312) 994-5500"
+    cpars_rating: ""
+
+  - project_name: "Agile DevSecOps Pipeline & Platform Engineering"
+    client_name: "U.S. General Services Administration"
+    client_agency: "Technology Transformation Services (TTS)"
+    contract_number: "GS-00F-115CA"
+    contract_type: "T&M"
+    contract_value: "$2.9M"
+    period_of_performance:
+      start: "2023-01"
+      end: "2024-12"
+    project_description: >
+      Designed and implemented a reusable DevSecOps platform for GSA TTS enabling 6 internal
+      product teams to deploy to production 60x more frequently. Delivered CI/CD pipelines
+      with automated security scanning gates, infrastructure-as-code templates, and
+      developer self-service capabilities on AWS GovCloud. Reduced mean time to production
+      from 3 weeks to under 2 hours.
+    technologies_used:
+      - "AWS GovCloud"
+      - "GitHub Actions"
+      - "ArgoCD"
+      - "Terraform"
+      - "Docker / Kubernetes (EKS)"
+      - "SonarQube"
+      - "Snyk"
+      - "OWASP ZAP"
+    team_size: 11
+    key_outcomes:
+      - metric: "Deployment frequency"
+        result: "60x improvement (weekly to continuous)"
+      - metric: "Mean time to production"
+        result: "Reduced from 21 days to 1.8 hours"
+      - metric: "Security defect escape rate"
+        result: "Reduced by 74% via automated scanning gates"
+      - metric: "Product teams onboarded"
+        result: "6 teams fully migrated to the platform"
+      - metric: "Infrastructure provisioning time"
+        result: "Reduced from 2 weeks to 35 minutes"
+    relevance_tags:
+      - "DevSecOps"
+      - "platform engineering"
+      - "federal government"
+      - "CI/CD"
+      - "AWS GovCloud"
+      - "agile"
+      - "GSA"
+    reference_contact:
+      name: "Jordan Fairfield"
+      title: "Product Lead, TTS Infrastructure"
+      email: "jordan.fairfield@gsa.gov"
+      phone: "(202) 501-0800"
+    cpars_rating: "Very Good"

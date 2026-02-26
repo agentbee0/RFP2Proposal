@@ -1,30 +1,123 @@
 # Legal Boilerplate — Standard contract terms and legal text
 # Used in: Terms & conditions, appendices
-# Run /setup-org for interactive setup or edit this file directly
 
 terms_and_conditions:
-  standard_terms: ""                       # Your standard contract terms
-  limitation_of_liability: ""              # Liability cap language
-  indemnification: ""                      # Indemnification clause
-  intellectual_property: ""                # IP ownership and rights
-  data_rights: ""                          # Data rights and ownership
-  termination_clause: ""                   # Termination for convenience/cause
-  dispute_resolution: ""                   # Mediation/arbitration/litigation
+  standard_terms: >
+    These terms govern the delivery of services by Acme Technology Solutions, Inc. ("Acme")
+    under any Statement of Work (SOW) or Task Order referencing these Standard Terms and
+    Conditions. In the event of conflict between these terms and a signed SOW, the SOW shall
+    control. All work performed is subject to applicable federal acquisition regulations (FAR)
+    and agency-specific supplements (e.g., DFARS, HHSAR) where Acme is performing as a
+    prime contractor on a U.S. Government contract.
+
+  limitation_of_liability: >
+    IN NO EVENT SHALL ACME TECHNOLOGY SOLUTIONS, INC. BE LIABLE TO THE CLIENT FOR ANY
+    INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR
+    RELATED TO THE SERVICES, REGARDLESS OF THE THEORY OF LIABILITY. ACME'S TOTAL AGGREGATE
+    LIABILITY FOR DIRECT DAMAGES SHALL NOT EXCEED THE TOTAL FEES PAID BY CLIENT TO ACME
+    IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM. The foregoing limitations do not apply
+    to damages arising from Acme's gross negligence or willful misconduct, or to Acme's
+    indemnification obligations under these terms.
+
+  indemnification: >
+    Each party shall indemnify, defend, and hold harmless the other party and its officers,
+    directors, employees, and agents from and against any third-party claims, losses,
+    damages, liabilities, and expenses (including reasonable attorneys' fees) arising from:
+    (a) the indemnifying party's breach of these terms; (b) the indemnifying party's gross
+    negligence or willful misconduct; or (c) the indemnifying party's infringement of any
+    third-party intellectual property right. Acme shall indemnify Client against claims
+    that Acme's proprietary tools or methodologies, as delivered to Client, infringe a
+    third-party patent, copyright, or trademark, provided Client promptly notifies Acme
+    of the claim and cooperates in the defense.
+
+  intellectual_property: >
+    All work product, deliverables, software, documentation, and other materials developed
+    by Acme specifically for the Client under an applicable SOW ("Work Product") shall be
+    considered work made for hire and shall be owned by the Client upon receipt of full
+    payment. Acme retains ownership of its pre-existing intellectual property, including
+    proprietary tools, frameworks, methodologies, and reusable code libraries ("Acme IP").
+    Acme grants Client a perpetual, non-exclusive, royalty-free license to use any Acme IP
+    embedded in delivered Work Product solely for Client's internal business purposes.
+    For U.S. Government contracts, data rights are governed by FAR 52.227-14 and applicable
+    agency supplements; Acme asserts Limited Rights only in proprietary Acme IP not
+    specifically funded by the Government.
+
+  data_rights: >
+    Client retains full ownership of all Client data processed, stored, or transmitted by
+    Acme in the performance of services. Acme shall not use Client data for any purpose
+    other than delivering the contracted services. Acme shall implement and maintain
+    appropriate technical and organizational safeguards to protect Client data against
+    unauthorized access, disclosure, or destruction. Upon contract expiration or termination,
+    Acme shall return or destroy all Client data within 30 days, as directed by Client in
+    writing, and provide written certification of destruction upon request.
+
+  termination_clause: >
+    Termination for Convenience: Client may terminate any SOW for convenience upon 30
+    days written notice. Upon such termination, Client shall pay Acme for all work
+    satisfactorily completed through the termination date, plus reasonable costs incurred
+    in connection with termination (including demobilization costs), not to exceed 15% of
+    the remaining contract value. Termination for Cause: Either party may terminate a SOW
+    for material breach if the breaching party fails to cure such breach within 15 business
+    days of written notice specifying the breach in reasonable detail. For government
+    contracts, terminations are governed by FAR Part 49.
+
+  dispute_resolution: >
+    The parties shall use good-faith efforts to resolve any dispute through direct
+    negotiation within 15 business days of written notice of the dispute. If unresolved,
+    the parties shall submit the dispute to non-binding mediation before JAMS under its
+    Streamlined Mediation Rules. If mediation fails, disputes shall be resolved by binding
+    arbitration before JAMS in Washington, D.C. under its Comprehensive Arbitration Rules,
+    with a single arbitrator. The prevailing party shall be entitled to recover reasonable
+    attorneys' fees. For disputes arising under U.S. Government contracts, the Contracts
+    Disputes Act (41 U.S.C. §§ 7101–7109) shall govern.
 
 insurance:
   general_liability:
-    coverage_amount: ""                    # e.g., "$2M per occurrence"
-    carrier: ""
+    coverage_amount: "$2,000,000 per occurrence / $4,000,000 aggregate"
+    carrier: "Travelers Property Casualty Company of America"
   professional_liability:
-    coverage_amount: ""                    # e.g., "$5M aggregate"
-    carrier: ""
+    coverage_amount: "$5,000,000 per claim / $5,000,000 aggregate"
+    carrier: "Hiscox Insurance Company Inc."
   cyber_liability:
-    coverage_amount: ""                    # e.g., "$5M per claim"
-    carrier: ""
-  workers_comp: ""                         # e.g., "Statutory limits in all operating states"
+    coverage_amount: "$5,000,000 per claim / $10,000,000 aggregate"
+    carrier: "Coalition Insurance Solutions"
+  workers_comp: "Statutory limits in all states where Acme employees are located, with Employer's Liability limits of $1,000,000 per occurrence."
 
 compliance_statements:
-  equal_opportunity: ""                    # EEO/affirmative action statement
-  section_508: ""                          # Accessibility compliance statement
-  data_privacy: ""                         # Data privacy/protection statement
-  export_controls: ""                      # Export control compliance
+  equal_opportunity: >
+    Acme Technology Solutions, Inc. is an Equal Opportunity Employer. All qualified
+    applicants will receive consideration for employment without regard to race, color,
+    religion, sex, sexual orientation, gender identity, national origin, disability,
+    veteran status, or any other protected characteristic under applicable federal, state,
+    or local law. Acme is committed to affirmative action and maintains an Affirmative
+    Action Program (AAP) in compliance with Executive Order 11246, Section 503 of the
+    Rehabilitation Act, and the Vietnam Era Veterans' Readjustment Assistance Act (VEVRAA).
+
+  section_508: >
+    Acme Technology Solutions is committed to ensuring all electronic and information
+    technology (EIT) products and services delivered under federal contracts meet the
+    accessibility standards set forth in Section 508 of the Rehabilitation Act (29 U.S.C.
+    § 794d) and the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. All
+    software deliverables undergo formal Section 508 conformance testing using the DHS
+    Trusted Tester methodology prior to acceptance. Acme maintains three Section 508
+    Trusted Testers on staff and provides documented Voluntary Product Accessibility
+    Templates (VPATs) for all delivered systems.
+
+  data_privacy: >
+    Acme Technology Solutions maintains a comprehensive privacy program aligned with
+    the Privacy Act of 1974, the E-Government Act of 2002, NIST SP 800-122, and applicable
+    state privacy laws (including CCPA). For engagements involving personally identifiable
+    information (PII) or protected health information (PHI), Acme implements data minimization
+    principles, role-based access controls, encryption at rest and in transit, and maintains
+    a System of Records Notice (SORN) review process. Acme's privacy practices are audited
+    annually by a third-party assessor.
+
+  export_controls: >
+    Acme Technology Solutions complies with all applicable U.S. export control laws and
+    regulations, including the Export Administration Regulations (EAR, 15 C.F.R. Parts
+    730–774) and the International Traffic in Arms Regulations (ITAR, 22 C.F.R. Parts
+    120–130). Acme screens all employees, subcontractors, and proposed exports against
+    the Consolidated Screening List (CSL) prior to engagement. Acme does not export or
+    re-export controlled technology, software, or services without proper licensing or
+    applicable license exemptions. All staff with access to export-controlled data
+    complete annual export control compliance training.

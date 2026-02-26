@@ -1,39 +1,221 @@
 # Team Bios — Key personnel and subject matter experts
 # Used in: Staffing plan, key personnel resumes, org chart
-# Run /setup-org for interactive setup or edit this file directly
 
 key_personnel:
-  # - name: "Jane Smith"
-  #   proposed_role: "Project Manager"       # Role proposed for RFP responses
-  #   current_title: "Senior Project Manager"
-  #   years_experience: 12
-  #   education:
-  #     - degree: "M.S. Computer Science"
-  #       institution: "MIT"
-  #       year: 2014
-  #     - degree: "B.S. Information Systems"
-  #       institution: "Georgia Tech"
-  #       year: 2012
-  #   certifications:                        # Professional certifications
-  #     - "PMP"
-  #     - "CSM (Certified ScrumMaster)"
-  #     - "AWS Solutions Architect"
-  #   clearance_level: ""                    # Security clearance if applicable
-  #   bio_short: >
-  #     12+ years managing enterprise software projects with a track record
-  #     of on-time, on-budget delivery across healthcare and financial services.
-  #   bio_full: >
-  #     Jane Smith brings 12+ years of experience managing complex software
-  #     development projects for Fortune 500 clients and federal agencies.
-  #     She has successfully led teams of up to 30 engineers, delivering
-  #     mission-critical systems in healthcare, financial services, and
-  #     government sectors. Jane is PMP-certified and holds an M.S. in
-  #     Computer Science from MIT.
-  #   relevant_experience:
-  #     - project: "Healthcare Data Platform"
-  #       role: "Project Manager"
-  #       description: "Led 12-person team delivering a HIPAA-compliant platform"
-  #     - project: "Financial Analytics Dashboard"
-  #       role: "Program Manager"
-  #       description: "Managed $4M program with 3 concurrent workstreams"
-  #   labor_category: "Project Manager III"   # For pricing alignment
+  - name: "Dr. Renata Osei"
+    proposed_role: "Program Manager"
+    current_title: "Vice President, Delivery Excellence"
+    years_experience: 19
+    education:
+      - degree: "Ph.D. Information Systems"
+        institution: "University of Maryland"
+        year: 2008
+      - degree: "B.S. Computer Science"
+        institution: "Howard University"
+        year: 2003
+    certifications:
+      - "PMP (Project Management Professional)"
+      - "SAFe 6.0 Program Consultant (SPC)"
+      - "ITIL 4 Managing Professional"
+      - "AWS Certified Solutions Architect – Professional"
+    clearance_level: "SECRET"
+    bio_short: >
+      Dr. Osei brings 19 years of experience leading complex federal IT programs up to $25M,
+      with a proven record of on-time, on-budget delivery across DHS, VA, and DoD clients.
+      She is a certified PMP and SAFe Program Consultant with deep expertise in agile
+      transformation and cross-functional team leadership.
+    bio_full: >
+      Dr. Renata Osei serves as Vice President of Delivery Excellence at Acme Technology
+      Solutions, where she oversees a portfolio of 12 active federal contracts. With 19 years
+      of IT program management experience, she has directed programs ranging from $2M to $25M
+      for clients including the Department of Veterans Affairs, DHS/CISA, GSA, and the
+      Department of Defense. Dr. Osei pioneered Acme's enterprise agile transformation in
+      2018, resulting in a 45% improvement in on-time delivery rates across the firm's project
+      portfolio. She holds a Ph.D. in Information Systems from the University of Maryland and
+      is a frequent speaker at the PMI Government Contracting conference.
+    relevant_experience:
+      - project: "Enterprise Data Lake & Analytics Platform (VA/VBA)"
+        role: "Program Manager"
+        description: "Led 18-person team delivering $7.4M FedRAMP-authorized data analytics platform"
+      - project: "Zero Trust Architecture Implementation (DHS/CISA)"
+        role: "Program Manager"
+        description: "Directed $5.1M ZTA modernization program across 14,000+ endpoints"
+      - project: "DoD Enterprise Resource Planning Migration"
+        role: "Senior PM"
+        description: "Managed migration of 7 legacy ERP modules to cloud-native architecture"
+    labor_category: "Program Manager IV"
+
+  - name: "Marcus Chen"
+    proposed_role: "Technical Lead / Solution Architect"
+    current_title: "Principal Cloud Architect"
+    years_experience: 14
+    education:
+      - degree: "M.S. Computer Engineering"
+        institution: "Carnegie Mellon University"
+        year: 2012
+      - degree: "B.S. Electrical Engineering"
+        institution: "University of California, Berkeley"
+        year: 2010
+    certifications:
+      - "AWS Certified Solutions Architect – Professional"
+      - "Google Cloud Professional Cloud Architect"
+      - "Certified Kubernetes Administrator (CKA)"
+      - "HashiCorp Terraform Associate"
+      - "TOGAF 9.2 Certified"
+    clearance_level: "SECRET"
+    bio_short: >
+      Marcus Chen is a principal cloud architect with 14 years designing and delivering
+      enterprise-scale cloud systems for federal and commercial clients. He specializes
+      in multi-cloud architectures, DevSecOps platforms, and FedRAMP authorization,
+      holding certifications across AWS, GCP, and Kubernetes.
+    bio_full: >
+      Marcus Chen is Acme Technology Solutions' Principal Cloud Architect and serves as
+      the technical authority on cloud modernization and platform engineering engagements.
+      He has designed cloud architectures for more than 30 enterprise systems, including
+      7 FedRAMP-authorized environments. Marcus led the technical design and delivery of
+      Acme's award-winning DevSecOps platform for GSA TTS, which achieved a 60x improvement
+      in deployment frequency. Prior to joining Acme, he was a senior architect at Booz Allen
+      Hamilton supporting DoD cloud initiatives. Marcus holds graduate degrees from Carnegie
+      Mellon and is a regular contributor to the Cloud Native Computing Foundation community.
+    relevant_experience:
+      - project: "Agile DevSecOps Pipeline & Platform Engineering (GSA TTS)"
+        role: "Technical Lead"
+        description: "Architected reusable DevSecOps platform enabling 60x deployment frequency improvement"
+      - project: "Enterprise Data Lake (VA/VBA)"
+        role: "Cloud Architect"
+        description: "Designed AWS GovCloud data lake architecture achieving ATO in 87 days"
+      - project: "Financial Regulatory Reporting Platform (SEC)"
+        role: "Solution Architect"
+        description: "Designed highly-available multi-region architecture for real-time regulatory reporting"
+    labor_category: "Senior Engineer / Architect III"
+
+  - name: "Priya Nambiar"
+    proposed_role: "Data Science & AI Lead"
+    current_title: "Director of AI/ML Practice"
+    years_experience: 11
+    education:
+      - degree: "M.S. Statistics and Machine Learning"
+        institution: "Georgia Institute of Technology"
+        year: 2015
+      - degree: "B.S. Mathematics"
+        institution: "University of Michigan"
+        year: 2013
+    certifications:
+      - "AWS Certified Machine Learning – Specialty"
+      - "Google Cloud Professional Data Engineer"
+      - "Databricks Certified ML Professional"
+      - "Certified Analytics Professional (CAP)"
+    clearance_level: "PUBLIC TRUST"
+    bio_short: >
+      Priya Nambiar leads Acme's AI/ML practice with 11 years of experience building
+      production machine learning systems for healthcare, financial services, and
+      federal clients. She specializes in NLP, predictive modeling, and responsible
+      AI frameworks, with a strong record of translating research into operational systems.
+    bio_full: >
+      Priya Nambiar directs Acme Technology Solutions' AI and Machine Learning practice,
+      leading a team of 14 data scientists and ML engineers. She has designed and deployed
+      more than 20 production AI/ML systems across healthcare payer organizations, financial
+      services firms, and federal agencies. Priya led the development of Acme's proprietary
+      AI-assisted claims adjudication engine for BluePeak Health Systems, which increased
+      the auto-adjudication rate from 54% to 79%. She is a co-author of two peer-reviewed
+      papers on explainable AI in high-stakes decision systems and serves on the advisory
+      board of the Responsible AI Institute. Priya is passionate about building AI systems
+      that are not only accurate but auditable, fair, and trustworthy.
+    relevant_experience:
+      - project: "Healthcare Claims Processing Modernization (BluePeak Health)"
+        role: "AI/ML Lead"
+        description: "Built AI claims adjudication engine increasing auto-adjudication from 54% to 79%"
+      - project: "Predictive Maintenance Platform (DOE National Lab)"
+        role: "Data Science Lead"
+        description: "Deployed anomaly detection models reducing equipment failures by 38%"
+      - project: "NLP-Powered Benefits Navigator (SSA)"
+        role: "Lead Data Scientist"
+        description: "Built NLP system improving citizen self-service resolution rate by 47%"
+    labor_category: "Senior Data Scientist III"
+
+  - name: "Derek Hollingsworth"
+    proposed_role: "Cybersecurity Lead"
+    current_title: "Principal Cybersecurity Architect"
+    years_experience: 16
+    education:
+      - degree: "M.S. Information Assurance"
+        institution: "George Mason University"
+        year: 2011
+      - degree: "B.S. Network Security"
+        institution: "Towson University"
+        year: 2009
+    certifications:
+      - "CISSP (Certified Information Systems Security Professional)"
+      - "CISM (Certified Information Security Manager)"
+      - "CompTIA Security+ CE"
+      - "Certified Ethical Hacker (CEH)"
+      - "GIAC Security Essentials (GSEC)"
+    clearance_level: "TOP SECRET"
+    bio_short: >
+      Derek Hollingsworth is a CISSP-certified cybersecurity architect with 16 years
+      securing federal and enterprise environments. He specializes in Zero Trust Architecture,
+      cloud security, ATO support, and incident response, with hands-on experience
+      across DHS, DoD, and Intelligence Community clients.
+    bio_full: >
+      Derek Hollingsworth serves as Acme's Principal Cybersecurity Architect and has
+      spent 16 years at the intersection of enterprise security and federal IT. He led
+      Acme's landmark Zero Trust Architecture engagement for DHS/CISA, reducing the mean
+      time to detect security incidents from 11 days to 4.2 hours across a 14,000-endpoint
+      environment. Before joining Acme, Derek served as a cybersecurity advisor at MITRE
+      Corporation and conducted vulnerability research for the National Security Agency.
+      He holds an active TOP SECRET clearance and has supported ATO/RMF processes for
+      more than 35 federal systems across FISMA-moderate and FISMA-high impact levels.
+    relevant_experience:
+      - project: "Zero Trust Architecture Implementation (DHS/CISA)"
+        role: "Cybersecurity Lead Architect"
+        description: "Directed full ZTA deployment across 14,200 endpoints; reduced MTTD from 11 days to 4.2 hours"
+      - project: "DoD Cloud Security Assessment"
+        role: "Lead Penetration Tester"
+        description: "Conducted red team assessment identifying 47 critical vulnerabilities across 5 cloud environments"
+      - project: "FISMA High ATO Support (DHS HQ)"
+        role: "Information System Security Engineer"
+        description: "Led RMF process and achieved ATO for 8 high-impact systems in 14 months"
+    labor_category: "Senior Cybersecurity Engineer III"
+
+  - name: "Aisha Thornton"
+    proposed_role: "UX / Human-Centered Design Lead"
+    current_title: "Senior UX Strategist"
+    years_experience: 9
+    education:
+      - degree: "M.F.A. Interaction Design"
+        institution: "Savannah College of Art and Design"
+        year: 2017
+      - degree: "B.A. Cognitive Science"
+        institution: "University of Virginia"
+        year: 2015
+    certifications:
+      - "Certified Usability Analyst (CUA)"
+      - "Section 508 Trusted Tester (v5)"
+      - "Nielsen Norman Group UX Certificate"
+    clearance_level: ""
+    bio_short: >
+      Aisha Thornton is a human-centered design practitioner with 9 years of experience
+      creating accessible, user-tested digital experiences for federal and commercial clients.
+      She brings rigorous research methods and Section 508 expertise, with a track record
+      of dramatically improving citizen and employee satisfaction scores.
+    bio_full: >
+      Aisha Thornton leads human-centered design at Acme Technology Solutions, guiding
+      research, strategy, and interaction design across the firm's software development
+      engagements. She has conducted usability research with more than 2,000 end users
+      across federal and commercial programs, and has a particular specialty in designing
+      for diverse and low-digital-literacy populations. Aisha led the UX redesign of the
+      VA Benefits Navigator portal, resulting in a 38-point increase in the System Usability
+      Scale (SUS) score and a 29% reduction in call center volume. She is a Section 508
+      Trusted Tester and ensures all Acme-delivered systems meet WCAG 2.1 AA standards
+      before launch.
+    relevant_experience:
+      - project: "VA Benefits Navigator Redesign (VA/VBA)"
+        role: "Lead UX Designer"
+        description: "Redesigned benefits portal; SUS score improved from 51 to 89, call center volume down 29%"
+      - project: "SSA Online Claims Portal Accessibility Audit"
+        role: "Section 508 Lead"
+        description: "Identified and remediated 312 accessibility defects ahead of mandatory compliance deadline"
+      - project: "BluePeak Health Member Portal"
+        role: "UX Research Lead"
+        description: "Conducted research with 400+ members; redesign improved task completion rate from 61% to 92%"
+    labor_category: "Senior UX Designer II"

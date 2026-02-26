@@ -1,41 +1,68 @@
 # Company Profile — Core organizational information
 # Used in: Cover letter, executive summary, company description sections
-# Run /setup-org for interactive setup or edit this file directly
 
-company_name: ""                    # Display name (e.g., "Acme Software Solutions")
-legal_name: ""                      # Full legal entity name
-dba: ""                             # "Doing Business As" if different
-website: ""
-email_general: ""
-phone: ""
+company_name: "Acme Technology Solutions"
+legal_name: "Acme Technology Solutions, Inc."
+dba: "AcmeTech"
+website: "https://www.acmetechsolutions.com"
+email_general: "info@acmetechsolutions.com"
+phone: "(571) 882-4400"
 
 address:
-  street: ""
-  city: ""
-  state: ""
-  zip: ""
-  country: ""
+  street: "1250 Innovation Drive, Suite 400"
+  city: "Reston"
+  state: "VA"
+  zip: "20190"
+  country: "USA"
 
 # Registration identifiers (for government proposals)
-duns_number: ""                     # DUNS number
-cage_code: ""                       # CAGE code
-uei: ""                             # Unique Entity Identifier (SAM.gov)
-naics_codes:                        # NAICS codes your company operates under
-  # - code: "541511"
-  #   description: "Custom Computer Programming Services"
-  #   small_business: true          # Whether you qualify as small for this NAICS
+duns_number: "08-742-3891"
+cage_code: "7RH22"
+uei: "ACMT3X9LKV47"
+naics_codes:
+  - code: "541511"
+    description: "Custom Computer Programming Services"
+    small_business: true
+  - code: "541512"
+    description: "Computer Systems Design Services"
+    small_business: true
+  - code: "541519"
+    description: "Other Computer Related Services"
+    small_business: true
+  - code: "541715"
+    description: "Research and Development in the Physical, Engineering, and Life Sciences"
+    small_business: true
 
-# Socioeconomic set-aside categories (if applicable)
-set_aside_categories: []            # e.g., ["8(a)", "HUBZone", "SDVOSB", "WOSB"]
+# Socioeconomic set-aside categories
+set_aside_categories:
+  - "8(a)"
+  - "HUBZone"
+  - "SDVOSB"
 
 # Company overview
-founded_year: ""
-employee_count: ""
-annual_revenue_range: ""            # e.g., "$10M-$50M"
-headquarters_location: ""
+founded_year: "2009"
+employee_count: "285"
+annual_revenue_range: "$25M–$50M"
+headquarters_location: "Reston, VA"
 
 # Narrative descriptions
-elevator_pitch: ""                  # 2-3 sentence company summary
-mission_statement: ""
-vision_statement: ""
-core_values: []                     # e.g., ["Innovation", "Quality", "Integrity"]
+elevator_pitch: >
+  Acme Technology Solutions is a mission-driven IT services and software development firm
+  specializing in cloud modernization, data analytics, and AI-enabled solutions for federal
+  agencies and commercial enterprises. With over 15 years of proven delivery, we transform
+  complex technology challenges into scalable, secure, and user-centered outcomes.
+
+mission_statement: >
+  To deliver innovative, reliable, and secure technology solutions that empower our clients
+  to achieve their missions faster and with greater confidence.
+
+vision_statement: >
+  To be the most trusted technology partner for government and enterprise clients navigating
+  digital transformation—recognized for our integrity, expertise, and measurable results.
+
+core_values:
+  - "Mission First"
+  - "Technical Excellence"
+  - "Transparent Partnerships"
+  - "Continuous Innovation"
+  - "Security by Design"

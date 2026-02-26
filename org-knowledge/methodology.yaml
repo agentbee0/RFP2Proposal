@@ -1,44 +1,206 @@
 # Methodology — Delivery and project management approach
 # Used in: Management approach, project methodology sections
-# Run /setup-org for interactive setup or edit this file directly
 
 delivery_methodology:
-  name: ""                          # e.g., "Agile/Scrum", "SAFe", "Hybrid Agile-Waterfall"
-  description: ""                   # Brief overview of your approach
-  phases:                           # Standard project phases
-    # - name: "Discovery & Planning"
-    #   description: "Requirements analysis, architecture design, project planning"
-    #   key_activities: ["Stakeholder interviews", "Requirements workshops", "Architecture design"]
-    #   deliverables: ["Requirements Document", "Architecture Design", "Project Plan"]
-    #   typical_duration: "2-4 weeks"
-    # - name: "Development"
-    #   description: "Iterative development in 2-week sprints"
-    #   key_activities: ["Sprint planning", "Development", "Code review", "Testing"]
-    #   deliverables: ["Working software increments", "Sprint reports"]
-    #   typical_duration: "8-16 weeks"
+  name: "Acme Agile Delivery Framework (AADF)"
+  description: >
+    Acme's proprietary Agile Delivery Framework is a SAFe-aligned, hybrid agile methodology
+    tailored for federal and regulated-industry engagements. AADF combines the speed and
+    adaptability of Scrum with the governance rigor required by FISMA, CMMI Level 3, and
+    federal acquisition regulations. All programs operate in 2-week sprints within a
+    structured Program Increment (PI) planning cadence of 10 weeks. AADF integrates
+    security and compliance activities directly into the sprint workflow, ensuring zero
+    end-of-project compliance surprises.
+  phases:
+    - name: "Kickoff & Discovery"
+      description: >
+        Establish program governance, conduct stakeholder interviews, document
+        current-state architecture, and define success criteria and key performance indicators.
+      key_activities:
+        - "Program kickoff and team onboarding"
+        - "Stakeholder identification and interview series"
+        - "Current-state architecture and data landscape assessment"
+        - "Risk register initialization"
+        - "Definition of Done and Definition of Ready alignment"
+        - "Tool and environment provisioning"
+      deliverables:
+        - "Program Charter"
+        - "Stakeholder Map and RACI Matrix"
+        - "Current-State Assessment Report"
+        - "Initial Risk Register"
+        - "Project Management Plan (PMP)"
+        - "Communication Plan"
+      typical_duration: "3–4 weeks"
+
+    - name: "Architecture & Planning"
+      description: >
+        Define target-state architecture, establish DevSecOps pipeline, decompose epics
+        into user stories, and conduct the first Program Increment planning session.
+      key_activities:
+        - "Solution architecture design and review"
+        - "Security architecture review and threat modeling"
+        - "Product backlog creation and story mapping"
+        - "PI Planning session (all teams, 2 days)"
+        - "Infrastructure-as-code environment setup"
+        - "CI/CD pipeline establishment with security gates"
+      deliverables:
+        - "System Architecture Document (SAD)"
+        - "Security Architecture Review"
+        - "Initial Product Backlog (priority-ordered)"
+        - "PI Objectives and Sprint 0 Plan"
+        - "DevSecOps Pipeline Documentation"
+      typical_duration: "4–6 weeks"
+
+    - name: "Iterative Development"
+      description: >
+        Deliver working, tested, and secure software in 2-week sprints. Each sprint
+        produces a potentially shippable increment reviewed by the client Product Owner.
+      key_activities:
+        - "Sprint planning (2-week cadence)"
+        - "Daily standups (15 minutes, dev team)"
+        - "Development with pair programming and code review"
+        - "Automated unit, integration, and regression testing"
+        - "Security scanning (SAST, DAST, SCA) on every PR"
+        - "Sprint review / demo with client stakeholders"
+        - "Sprint retrospective and backlog refinement"
+      deliverables:
+        - "Shippable software increments (every 2 weeks)"
+        - "Sprint Review Reports"
+        - "Test Results and Coverage Reports"
+        - "Security Scan Reports (automated, every sprint)"
+        - "Burndown Charts and Velocity Metrics"
+      typical_duration: "8–24 weeks (scales to program size)"
+
+    - name: "Testing & Hardening"
+      description: >
+        Conduct system-level integration testing, performance testing, user acceptance
+        testing (UAT), and security hardening prior to production deployment.
+      key_activities:
+        - "System Integration Testing (SIT)"
+        - "Performance and load testing"
+        - "Penetration testing and vulnerability assessment"
+        - "User Acceptance Testing facilitation"
+        - "Section 508 accessibility audit"
+        - "Security Assessment Report (SAR) preparation"
+        - "ATO documentation package assembly (if applicable)"
+      deliverables:
+        - "System Integration Test Report"
+        - "Performance Test Report"
+        - "Penetration Test Report"
+        - "UAT Completion Sign-off"
+        - "Section 508 Conformance Report"
+        - "Security Assessment Report (SAR)"
+        - "Authority to Operate (ATO) Package"
+      typical_duration: "4–8 weeks"
+
+    - name: "Deployment & Transition"
+      description: >
+        Execute production deployment with rollback plan, conduct training, transfer
+        knowledge, and support hyper-care stabilization period.
+      key_activities:
+        - "Production deployment (blue/green or canary strategy)"
+        - "Rollback plan activation readiness drill"
+        - "End-user and administrator training delivery"
+        - "Knowledge transfer sessions with client IT staff"
+        - "Hyper-care monitoring (30-day post-launch)"
+        - "Operations & Maintenance runbook handoff"
+      deliverables:
+        - "Deployment Plan and Runbook"
+        - "Training Materials (role-based)"
+        - "Training Completion Records"
+        - "Knowledge Transfer Documentation"
+        - "Operations & Maintenance (O&M) Manual"
+        - "Post-Deployment Monitoring Report"
+      typical_duration: "3–6 weeks"
 
 sdlc_approach:
-  name: ""                          # e.g., "Iterative SDLC"
-  description: ""
+  name: "Secure Iterative SDLC"
+  description: >
+    Acme's SDLC is security-first and iterative, embedding security controls at every stage
+    rather than treating security as a final-phase gate. Our shift-left approach integrates
+    static analysis, dependency scanning, container security, and threat modeling into the
+    developer workflow. All code is peer-reviewed before merging; no code enters the main
+    branch without passing automated quality and security gates.
 
 project_management:
-  framework: ""                     # e.g., "PMI/PMBOK", "PRINCE2"
-  tools: []                         # e.g., ["Jira", "Confluence", "MS Project"]
-  reporting_cadence: ""             # e.g., "Weekly status reports, monthly executive summaries"
-  governance_structure: ""          # e.g., "Steering committee, change control board"
+  framework: "PMI/PMBOK 7th Edition aligned with SAFe 6.0"
+  tools:
+    - "Jira (backlog management, sprint tracking, defect management)"
+    - "Confluence (documentation, runbooks, architecture decisions)"
+    - "Microsoft Teams (communication and stakeholder collaboration)"
+    - "GitHub / GitHub Actions (source control and CI/CD)"
+    - "PowerBI (executive dashboards and metrics reporting)"
+    - "ServiceNow (ITSM and change management)"
+  reporting_cadence: >
+    Weekly sprint review reports distributed to client Product Owner and COR. Bi-weekly
+    executive dashboard updates to program leadership. Monthly Program Increment reviews
+    with full stakeholder community. Quarterly Program Health Reports per contract requirements.
+  governance_structure: >
+    Each program operates with a Steering Committee (executive sponsors, client COR, Acme VP),
+    a Change Control Board meeting bi-weekly, and an Integrated Program Team (IPT) with
+    daily operational touchpoints. All change requests are documented, impact-analyzed,
+    and approved before implementation.
 
 quality_assurance:
-  approach: ""                      # e.g., "Shift-left testing with automated CI/CD"
-  testing_methodology: ""           # e.g., "Unit, integration, E2E, performance, security testing"
-  code_review_process: ""           # e.g., "All PRs require peer review before merge"
-  defect_management: ""             # e.g., "Jira-based defect tracking with SLA-driven resolution"
+  approach: >
+    Shift-left testing with continuous integration, automated quality gates, and mandatory
+    peer code review. Every pull request triggers a full suite of automated tests and
+    security scans before merge. QA engineers are embedded in squads, not siloed—ensuring
+    quality is everyone's responsibility from the first line of code.
+  testing_methodology: >
+    Multi-layer testing pyramid: unit tests (developer-owned, 80%+ coverage target),
+    integration tests (API and service contracts), end-to-end regression tests (critical
+    user journeys), performance tests (load, stress, soak), and security tests (SAST,
+    DAST, SCA, manual pen test). UAT conducted with real end users in a production-mirror
+    environment.
+  code_review_process: >
+    All pull requests require at least one peer review from a team member and one review
+    from a senior or staff engineer before merge. Reviewers evaluate correctness, security,
+    performance, readability, and test coverage. Draft PRs are encouraged early to surface
+    design issues. Review SLA is 24 hours for standard PRs, 4 hours for hotfixes.
+  defect_management: >
+    All defects tracked in Jira with severity and priority classification. Critical defects
+    (P1) are remediated within 4 hours; High (P2) within 24 hours; Medium (P3) within the
+    current sprint; Low (P4) by end of next sprint. Defect trends reviewed weekly by
+    the QA Lead and reported to the client COR monthly.
 
 risk_management:
-  approach: ""                      # e.g., "Proactive risk identification with monthly reviews"
-  risk_categories: []               # e.g., ["Technical", "Schedule", "Resource", "External"]
-  mitigation_strategies: []         # e.g., ["Prototyping for technical risks", "Buffer time for schedule risks"]
+  approach: >
+    Proactive, continuous risk identification using a program-wide Risk Register maintained
+    in Confluence. Risks are assessed at sprint planning and formally reviewed in monthly
+    Risk Board meetings with client stakeholders. Acme uses a probability × impact scoring
+    matrix and requires documented mitigation and contingency plans for all Medium+ risks.
+  risk_categories:
+    - "Technical (architecture, integration, performance)"
+    - "Schedule (dependency, resource availability, scope creep)"
+    - "Resource (key personnel turnover, skill gaps)"
+    - "External (regulatory changes, third-party vendor delays)"
+    - "Security (threat landscape, compliance posture)"
+    - "Organizational (stakeholder alignment, change management)"
+  mitigation_strategies:
+    - "Prototyping and architectural spikes for technical unknowns"
+    - "20% sprint velocity buffer for unplanned work"
+    - "Cross-training and documented knowledge transfer to prevent key-person risk"
+    - "30-day incumbent overlap during transition-in"
+    - "Continuous monitoring dashboards for security risks"
+    - "Executive sponsor alignment sessions for organizational risks"
 
 transition_approach:
-  incoming: ""                      # How you handle transition-in from incumbents
-  outgoing: ""                      # How you handle transition-out
-  knowledge_transfer: ""            # Your knowledge transfer methodology
+  incoming: >
+    Acme's 30-day transition-in plan runs concurrently with the incumbent for the first
+    month. During this period, we conduct knowledge transfer sessions, document undocumented
+    institutional knowledge, inventory all systems and data assets, and onboard cleared
+    personnel. We guarantee no degradation of service levels during transition-in and
+    deliver a Transition-In Completion Report signed by the client COR.
+  outgoing: >
+    Acme is committed to seamless transitions. Upon contract end or recompete, we provide
+    a minimum 60-day transition-out plan, deliver comprehensive O&M documentation, facilitate
+    knowledge transfer sessions with the incoming contractor, and maintain service continuity
+    through the last day of performance. All intellectual property developed under the
+    contract is delivered to the client in agreed formats.
+  knowledge_transfer: >
+    Acme's knowledge transfer methodology is documentation-first: we maintain living
+    runbooks, architecture decision records (ADRs), and process documentation throughout
+    the contract. Transfer sessions are recorded and captioned. We deliver a Transition
+    Knowledge Base in the client's preferred system (Confluence, SharePoint, etc.) containing
+    all system documentation, SOPs, and institutional knowledge artifacts.

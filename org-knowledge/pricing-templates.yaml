@@ -1,33 +1,90 @@
 # Pricing Templates — Rate structures and pricing models
 # Used in: Pricing summary, cost volumes
-# Note: Actual pricing always requires human review (REQUIRED placeholders)
-# Run /setup-org for interactive setup or edit this file directly
+# Note: Actual pricing always requires human review before submission
 
 pricing_models:
-  # - model_type: "T&M"                    # Time & Materials
-  #   description: "Hourly billing with monthly invoicing, not-to-exceed ceiling"
-  # - model_type: "FFP"                    # Firm Fixed Price
-  #   description: "Fixed price per deliverable with milestone-based payments"
-  # - model_type: "CPFF"                   # Cost Plus Fixed Fee
-  #   description: "Reimbursable costs plus negotiated fixed fee"
+  - model_type: "T&M"
+    description: >
+      Time & Materials billing at hourly labor category rates with a not-to-exceed (NTE)
+      ceiling. Monthly invoicing based on certified timesheets. ODCs billed at cost plus
+      applicable G&A. Preferred for programs with evolving scope or exploratory research phases.
+  - model_type: "FFP"
+    description: >
+      Firm Fixed Price per deliverable milestone with payment triggered upon government
+      acceptance. Risk is absorbed by Acme. Preferred for well-defined, repeatable deliverables
+      such as platform implementations, training programs, and defined software releases.
+  - model_type: "CPFF"
+    description: >
+      Cost Plus Fixed Fee reimbursing allowable, allocable, and reasonable costs plus
+      a negotiated fixed fee (typically 8%). Preferred for R&D engagements and programs
+      with significant technical uncertainty.
+  - model_type: "IDIQ / Task Order"
+    description: >
+      Indefinite Delivery Indefinite Quantity vehicle with individual task orders issued
+      as FFP, T&M, or CPFF depending on task nature. Minimum order: $50,000.
+      Maximum contract ceiling: $25,000,000.
 
-labor_rates:                               # Standard rate card
-  # - labor_category: "Senior Developer"
-  #   hourly_rate: ""                       # Your standard hourly rate
-  #   annual_rate: ""                       # Annual equivalent
-  #   gsa_rate: ""                          # GSA schedule rate if applicable
+labor_rates:
+  - labor_category: "Program Manager IV"
+    hourly_rate: "$215"
+    annual_rate: "$447,200"
+    gsa_rate: "$198"
+  - labor_category: "Senior Engineer / Architect III"
+    hourly_rate: "$195"
+    annual_rate: "$405,600"
+    gsa_rate: "$182"
+  - labor_category: "Senior Data Scientist III"
+    hourly_rate: "$185"
+    annual_rate: "$384,800"
+    gsa_rate: "$174"
+  - labor_category: "Senior Cybersecurity Engineer III"
+    hourly_rate: "$190"
+    annual_rate: "$395,200"
+    gsa_rate: "$178"
+  - labor_category: "Full Stack Developer II"
+    hourly_rate: "$155"
+    annual_rate: "$322,400"
+    gsa_rate: "$144"
+  - labor_category: "Senior UX Designer II"
+    hourly_rate: "$145"
+    annual_rate: "$301,600"
+    gsa_rate: "$136"
+  - labor_category: "DevSecOps Engineer II"
+    hourly_rate: "$160"
+    annual_rate: "$332,800"
+    gsa_rate: "$149"
+  - labor_category: "Data Engineer II"
+    hourly_rate: "$155"
+    annual_rate: "$322,400"
+    gsa_rate: "$144"
+  - labor_category: "Business Analyst II"
+    hourly_rate: "$130"
+    annual_rate: "$270,400"
+    gsa_rate: "$122"
+  - labor_category: "Quality Assurance Engineer II"
+    hourly_rate: "$125"
+    annual_rate: "$260,000"
+    gsa_rate: "$117"
+  - labor_category: "Junior Developer I"
+    hourly_rate: "$105"
+    annual_rate: "$218,400"
+    gsa_rate: "$98"
+  - labor_category: "Administrative / Program Analyst I"
+    hourly_rate: "$85"
+    annual_rate: "$176,800"
+    gsa_rate: "$79"
 
-overhead_rates:                            # Indirect rates
-  fringe_rate: ""                          # Fringe benefit rate (e.g., "32%")
-  overhead_rate: ""                        # Overhead rate (e.g., "45%")
-  g_and_a_rate: ""                         # G&A rate (e.g., "12%")
-  fee_percentage: ""                       # Profit/fee percentage (e.g., "8%")
+overhead_rates:
+  fringe_rate: "34.2%"
+  overhead_rate: "43.7%"
+  g_and_a_rate: "11.8%"
+  fee_percentage: "8.0%"
 
 travel_rates:
-  per_diem_policy: ""                      # e.g., "GSA per diem rates"
-  mileage_rate: ""                         # e.g., "IRS standard mileage rate"
-  airfare_class: ""                        # e.g., "Coach/economy class"
+  per_diem_policy: "GSA per diem rates for lodging and M&IE applicable to the destination city, updated annually per GSA published schedules."
+  mileage_rate: "IRS standard business mileage rate (currently $0.67/mile for 2024)"
+  airfare_class: "Coach/economy class for all domestic travel. Business class permitted for international flights exceeding 6 hours with COR approval."
 
 discount_policies:
-  volume_discount: ""                      # e.g., "5% discount for contracts over $1M"
-  multi_year_discount: ""                  # e.g., "3% discount for 3+ year engagements"
+  volume_discount: "5% discount applied to total contract value for single-award contracts over $5M TCV"
+  multi_year_discount: "3% discount applied to base year rates for contracts with 2+ option years exercised consecutively"

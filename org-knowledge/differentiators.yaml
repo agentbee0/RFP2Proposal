@@ -1,34 +1,166 @@
 # Differentiators — Win themes and competitive advantages
 # Used in: Throughout all proposal sections (win theme threading)
-# Run /setup-org for interactive setup or edit this file directly
 
-win_themes:                                # Core themes woven throughout proposals
-  # - theme: "Proven Agile Delivery"
-  #   description: "We deliver working software every 2 weeks with zero surprise delays"
-  #   evidence: "100% on-time delivery across last 20 projects"
-  #   applicable_to:                       # RFP types where this theme resonates
-  #     - "software development"
-  #     - "application modernization"
-  #     - "digital transformation"
+win_themes:
+  - theme: "Proven Federal Delivery — On Time, On Budget"
+    description: >
+      Acme has delivered 94% of federal task orders on schedule and within budget over the
+      past five years. Our structured Agile Delivery Framework and proactive risk management
+      eliminate the surprise delays and cost overruns that plague large IT programs.
+    evidence: "94% on-time delivery rate across 41 federal task orders (2019–2024)"
+    applicable_to:
+      - "software development"
+      - "cloud modernization"
+      - "IT program management"
+      - "data analytics"
+      - "any federal IT acquisition"
+
+  - theme: "Security First, Not Security Last"
+    description: >
+      Our DevSecOps approach embeds security into every sprint, not as a final-phase gate.
+      We have achieved Authority to Operate (ATO) in as few as 87 days on FISMA-moderate
+      systems, and have never experienced a data breach across our entire federal portfolio.
+    evidence: >
+      87-day ATO on VA/VBA data lake; zero security breaches across all federal contracts;
+      100% of delivered systems passed security assessments on first submission.
+    applicable_to:
+      - "cybersecurity"
+      - "cloud migration"
+      - "software development"
+      - "data platforms"
+      - "federal IT"
+
+  - theme: "AI That's Operational, Not Just Experimental"
+    description: >
+      Acme builds AI/ML systems that run in production—not demos that gather dust. Our
+      data science team specializes in bridging the gap between research-grade models and
+      production-ready, auditable, and FedRAMP-compliant AI systems that deliver measurable
+      ROI from day one.
+    evidence: >
+      BluePeak claims engine increased auto-adjudication from 54% to 79% in production;
+      SSA NLP system improved self-service resolution by 47%; DoE predictive maintenance
+      model reduced equipment failures by 38%.
+    applicable_to:
+      - "AI/ML"
+      - "data analytics"
+      - "healthcare IT"
+      - "automation"
+      - "process improvement"
+
+  - theme: "Teams That Stay — Zero Disruptive Turnover"
+    description: >
+      Our 96% annual staff retention rate means the team you meet during proposal evaluation
+      is the team that delivers your program. We reject the body-shop model: our personnel
+      are dedicated, cleared, and deeply invested in client mission success.
+    evidence: >
+      96% annual retention rate; average key personnel tenure of 4.1 years per engagement;
+      zero involuntary key personnel substitutions across all active contracts.
+    applicable_to:
+      - "staffing"
+      - "long-term programs"
+      - "sensitive/cleared work"
+      - "any federal engagement"
 
 competitive_advantages:
-  # - advantage: "Zero-attrition dedicated teams"
-  #   description: "Our team retention rate is 98% — your team stays your team"
-  #   proof_points:
-  #     - "98% annual retention rate across all client engagements"
-  #     - "Average team tenure of 3.2 years on long-term contracts"
+  - advantage: "FedRAMP-Experienced, Not FedRAMP-Naive"
+    description: >
+      Acme has guided 9 federal systems through the FedRAMP authorization process, including
+      3 FedRAMP-High systems. Our in-house Authorization & Assessment team eliminates the
+      learning curve that slows competitors on their first-time FedRAMP engagements.
+    proof_points:
+      - "9 FedRAMP authorizations completed (3 High, 6 Moderate)"
+      - "Average time-to-ATO of 103 days vs. GSA-published average of 210 days"
+      - "100% first-submission pass rate on Security Assessment Reports (SARs)"
+
+  - advantage: "Proprietary AI-Assisted Development Toolchain"
+    description: >
+      AcmeAssist is our internal AI-augmented development platform that accelerates
+      code generation, automated testing, and documentation by an estimated 28%, without
+      compromising quality or security. Clients benefit from faster delivery at no added cost.
+    proof_points:
+      - "28% average velocity improvement measured across 8 projects using AcmeAssist"
+      - "40% reduction in boilerplate documentation time"
+      - "Fully auditable — all AI-generated code is reviewed by a senior engineer before merge"
+
+  - advantage: "Dedicated Small Business with Large Business Capabilities"
+    description: >
+      As a certified 8(a), HUBZone, and SDVOSB firm, Acme gives agencies the best of
+      both worlds: set-aside pricing flexibility with the certifications, past performance,
+      and technical bench of a mid-tier integrator. Our team includes former Big 4 consultants,
+      ex-NSA researchers, and retired senior federal IT executives.
+    proof_points:
+      - "8(a), HUBZone, and SDVOSB certified"
+      - "Senior team includes former MITRE, Booz Allen, and Deloitte practitioners"
+      - "$25M+ single-contract past performance as prime contractor"
 
 awards_and_recognition:
-  # - name: "Inc. 5000 Fastest Growing Companies"
-  #   year: 2025
-  #   issuing_body: "Inc. Magazine"
+  - name: "Inc. 5000 Fastest-Growing Private Companies"
+    year: 2024
+    issuing_body: "Inc. Magazine"
+  - name: "Washington Technology Fast 50"
+    year: 2023
+    issuing_body: "Washington Technology"
+  - name: "Employer of the Year — Mid-Size IT Services"
+    year: 2023
+    issuing_body: "Northern Virginia Technology Council (NVTC)"
+  - name: "CISA Industry Award for Cybersecurity Innovation"
+    year: 2023
+    issuing_body: "Cybersecurity and Infrastructure Security Agency"
+  - name: "AWS Partner Award — Public Sector Innovation"
+    year: 2022
+    issuing_body: "Amazon Web Services"
 
 partnerships:
-  # - partner_name: "AWS"
-  #   partnership_level: "Advanced Consulting Partner"
-  #   relevance: "Deep cloud infrastructure expertise with priority AWS support"
+  - partner_name: "Amazon Web Services (AWS)"
+    partnership_level: "Advanced Consulting Partner — Public Sector"
+    relevance: >
+      Deep AWS GovCloud expertise with dedicated AWS partner support, co-sell agreement,
+      and access to AWS Public Sector team resources for client engagements.
+  - partner_name: "Microsoft"
+    partnership_level: "Azure Expert MSP — Government"
+    relevance: >
+      Elite Microsoft Azure government designation covering Azure Government, Microsoft 365
+      Government, and Dynamics 365 for public sector clients.
+  - partner_name: "Databricks"
+    partnership_level: "Premier Consulting Partner"
+    relevance: >
+      Certified Databricks delivery capability for large-scale data engineering, lakehouse
+      architectures, and MLflow-based model lifecycle management.
+  - partner_name: "Palantir Technologies"
+    partnership_level: "Delivery Partner"
+    relevance: >
+      Certified Palantir Foundry implementation partner for federal data integration
+      and mission analytics use cases.
+  - partner_name: "ServiceNow"
+    partnership_level: "Elite Partner"
+    relevance: >
+      ServiceNow Elite partner with specializations in ITSM, ITOM, and SecOps for
+      federal agency service management modernization.
 
 unique_capabilities:
-  # - capability: "AI-Assisted Development"
-  #   description: "Proprietary AI tooling that accelerates development by 30%"
-  #   how_it_helps_clients: "Faster delivery without compromising quality"
+  - capability: "In-House FedRAMP Authorization Team"
+    description: >
+      Acme maintains a dedicated Authorization & Assessment (A&A) team of 12 certified
+      professionals specializing in federal security authorization (RMF, FedRAMP, DIACAP).
+      This eliminates dependence on expensive external 3PAOs for core ATO activities.
+    how_it_helps_clients: >
+      Faster ATO timelines (average 103 days vs. industry 210), lower compliance costs,
+      and continuous compliance monitoring throughout the contract period.
+
+  - capability: "Rapid Prototype & Pilot Lab"
+    description: >
+      Acme's Innovation Lab provides a pre-provisioned, cloud-based environment where
+      clients can see working prototypes within 72 hours of requirements alignment. We
+      use the lab to de-risk architecture decisions before contract award.
+    how_it_helps_clients: >
+      Reduces technical risk and accelerates source selection confidence. Clients can
+      evaluate Acme's approach on their actual use case before signing a contract.
+
+  - capability: "Cleared AI/ML Research Team"
+    description: >
+      A team of 6 cleared data scientists (SECRET and above) enabling AI/ML work
+      in classified and sensitive compartmented environments where commercial AI vendors
+      cannot operate.
+    how_it_helps_clients: >
+      Enables mission-critical AI/ML capabilities for Intelligence Community and DoD
+      clients with strict data handling requirements.

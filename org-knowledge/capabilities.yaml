@@ -1,33 +1,92 @@
 # Capabilities — Technical and service competencies
 # Used in: Technical approach, capability statements
-# Run /setup-org for interactive setup or edit this file directly
 
-service_lines:                      # Your main service offerings
-  # - name: "Custom Software Development"
-  #   description: "End-to-end development of bespoke software solutions"
-  #   key_technologies: ["React", "Node.js", "Python", "AWS"]
-  #   certifications: ["AWS Advanced Partner"]
+service_lines:
+  - name: "Cloud Modernization & Migration"
+    description: >
+      End-to-end cloud adoption and legacy system migration services, including
+      lift-and-shift, re-platforming, and cloud-native re-architecture on AWS, Azure,
+      and GCP. We hold FedRAMP-authorized environments and deliver ATO-ready solutions.
+    key_technologies: ["AWS GovCloud", "Azure Government", "Terraform", "Kubernetes", "Docker"]
+    certifications: ["AWS Advanced Consulting Partner", "Microsoft Azure Expert MSP"]
+
+  - name: "Custom Software Development"
+    description: >
+      Full-stack application development using modern frameworks and agile practices.
+      We build secure, scalable, and accessible web and mobile applications tailored
+      to mission needs, with built-in Section 508 compliance.
+    key_technologies: ["React", "Node.js", "Python", "Java Spring Boot", "PostgreSQL"]
+    certifications: ["CMMI Level 3"]
+
+  - name: "Data Analytics & AI/ML"
+    description: >
+      Advanced analytics platforms, machine learning pipelines, and AI-enabled decision
+      support tools. We design and operationalize data strategies from ingestion through
+      insight, including NLP, predictive modeling, and explainable AI.
+    key_technologies: ["Python", "TensorFlow", "Apache Spark", "Tableau", "Databricks"]
+    certifications: ["AWS Machine Learning Specialty", "Google Cloud Professional Data Engineer"]
+
+  - name: "Cybersecurity & Zero Trust"
+    description: >
+      Comprehensive cybersecurity services including risk assessments, penetration testing,
+      ATO support, SOC operations, and Zero Trust Architecture implementation aligned
+      with NIST SP 800-207 and M-22-09 federal mandates.
+    key_technologies: ["Palo Alto Prisma", "CrowdStrike Falcon", "Splunk SIEM", "Okta", "BeyondTrust"]
+    certifications: ["ISO 27001", "SOC 2 Type II"]
+
+  - name: "IT Program Management & Agile Transformation"
+    description: >
+      Program and project management services using PMI/PMBOK and SAFe Agile frameworks.
+      We coach and implement enterprise agile transformation, DevSecOps pipelines, and
+      governance structures for large-scale federal IT programs.
+    key_technologies: ["Jira", "Confluence", "ServiceNow", "MS Project", "Azure DevOps"]
+    certifications: ["PMI Registered Education Provider", "SAFe Partner"]
 
 technology_stack:
-  languages: []                     # e.g., ["TypeScript", "Python", "Java", "Go"]
-  frameworks: []                    # e.g., ["React", "Next.js", "Django", "Spring Boot"]
-  cloud_platforms: []               # e.g., ["AWS", "Azure", "GCP"]
-  databases: []                     # e.g., ["PostgreSQL", "MongoDB", "Redis"]
-  devops_tools: []                  # e.g., ["Docker", "Kubernetes", "Terraform", "GitHub Actions"]
-  security_tools: []                # e.g., ["SonarQube", "Snyk", "OWASP ZAP"]
+  languages: ["Python", "TypeScript", "Java", "Go", "SQL", "Bash", "R"]
+  frameworks: ["React", "Next.js", "Angular", "Django", "Spring Boot", "FastAPI", "Express.js"]
+  cloud_platforms: ["AWS", "AWS GovCloud", "Microsoft Azure", "Azure Government", "Google Cloud Platform"]
+  databases: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Amazon RDS", "Amazon DynamoDB", "Snowflake"]
+  devops_tools: ["Docker", "Kubernetes", "Terraform", "Ansible", "GitHub Actions", "Jenkins", "ArgoCD"]
+  security_tools: ["SonarQube", "Snyk", "OWASP ZAP", "Nessus", "Veracode", "Prisma Cloud"]
 
-certifications:                     # Organizational certifications
-  # - name: "ISO 27001"
-  #   issuing_body: "BSI"
-  #   valid_through: "2027-12-31"
+certifications:
+  - name: "ISO/IEC 27001:2022"
+    issuing_body: "BSI Group"
+    valid_through: "2027-03-15"
+  - name: "SOC 2 Type II"
+    issuing_body: "AICPA"
+    valid_through: "2026-09-30"
+  - name: "CMMI Dev Level 3"
+    issuing_body: "ISACA"
+    valid_through: "2027-06-01"
+  - name: "AWS Advanced Consulting Partner"
+    issuing_body: "Amazon Web Services"
+    valid_through: "2026-12-31"
+  - name: "Microsoft Azure Expert MSP"
+    issuing_body: "Microsoft"
+    valid_through: "2026-10-31"
 
 security_clearances:
-  facility_clearance: ""            # e.g., "SECRET"
-  personnel_clearances:             # Cleared staff availability
-    # - level: "SECRET"
-    #   count: 15
+  facility_clearance: "SECRET"
+  personnel_clearances:
+    - level: "TOP SECRET"
+      count: 8
+    - level: "SECRET"
+      count: 47
+    - level: "PUBLIC TRUST"
+      count: 92
 
-contract_vehicles:                  # Government contract vehicles
-  # - name: "GSA MAS"
-  #   contract_number: "GS-35F-XXXX"
-  #   ordering_guide: "https://..."
+contract_vehicles:
+  - name: "GSA Multiple Award Schedule (MAS)"
+    contract_number: "GS-35F-0482Y"
+    ordering_guide: "https://www.gsaadvantage.gov/acmetech"
+  - name: "CIO-SP3 Small Business"
+    contract_number: "75N98120D00137"
+    ordering_guide: "https://nitaac.nih.gov/services/cio-sp3-small-business"
+  - name: "SEWP V"
+    contract_number: "NNG15SC98B"
+    ordering_guide: "https://www.sewp.nasa.gov/acmetech"
+  - name: "Alliant 2 Small Business"
+    contract_number: "47QFCA20D0043"
+    ordering_guide: "https://www.gsa.gov/alliant2sb"
