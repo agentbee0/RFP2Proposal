@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Org-Knowledge Configuration — RFP2Proposal</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #e0e0e0; padding: 40px; }
+
+  .container { max-width: 1320px; margin: 0 auto; }
+
+  /* Header */
+  .header { text-align: center; margin-bottom: 48px; }
+  .header h1 { font-size: 32px; color: #fff; font-weight: 700; margin-bottom: 8px; }
+  .header .subtitle { font-size: 16px; color: #8892b0; line-height: 1.6; }
+  .header .badge { display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; font-size: 12px; font-weight: 600; padding: 4px 14px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 0.5px; }
+
+  /* Flow diagram */
+  .flow { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 48px; flex-wrap: wrap; }
+  .flow-box { background: #16213e; border: 1px solid #334155; border-radius: 12px; padding: 20px 28px; text-align: center; min-width: 180px; }
+  .flow-box.active { border-color: #667eea; background: linear-gradient(135deg, rgba(102,126,234,0.15), rgba(118,75,162,0.15)); }
+  .flow-box.future { border: 1px dashed #475569; opacity: 0.7; }
+  .flow-box .icon { font-size: 28px; margin-bottom: 8px; }
+  .flow-box .label { font-size: 14px; font-weight: 600; color: #e0e0e0; }
+  .flow-box .sublabel { font-size: 11px; color: #8892b0; margin-top: 4px; }
+  .flow-box.future .label { color: #8892b0; }
+  .flow-arrow { font-size: 24px; color: #667eea; font-weight: bold; }
+  .flow-arrow.future { color: #475569; }
+
+  /* Phase labels */
+  .phase-row { display: flex; justify-content: center; gap: 40px; margin-bottom: 32px; }
+  .phase-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 4px; }
+  .phase-label.now { color: #667eea; background: rgba(102,126,234,0.12); }
+  .phase-label.next { color: #f59e0b; background: rgba(245,158,11,0.12); }
+
+  /* YAML files grid */
+  .yaml-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+  @media (max-width: 1000px) { .yaml-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .yaml-card { background: #16213e; border: 1px solid #334155; border-radius: 10px; padding: 20px; transition: all 0.2s; position: relative; overflow: hidden; }
+  .yaml-card:hover { border-color: #667eea; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+  .yaml-card .filename { font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace; font-size: 13px; color: #667eea; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .yaml-card .filename .dot { width: 8px; height: 8px; border-radius: 50%; background: #667eea; display: inline-block; }
+  .yaml-card .desc { font-size: 13px; color: #cbd5e1; line-height: 1.5; margin-bottom: 12px; }
+  .yaml-card .feeds { font-size: 11px; color: #8892b0; }
+  .yaml-card .feeds strong { color: #a78bfa; }
+  .yaml-card .fill-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: #1e293b; }
+  .yaml-card .fill-bar .fill { height: 100%; border-radius: 0 0 10px 10px; }
+  .yaml-card .fill-bar .fill.high { background: linear-gradient(90deg, #22c55e, #4ade80); }
+  .yaml-card .fill-bar .fill.med { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+  .yaml-card .fill-bar .fill.low { background: linear-gradient(90deg, #ef4444, #f87171); }
+
+  /* Code preview */
+  .code-section { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px; }
+  @media (max-width: 900px) { .code-section { grid-template-columns: 1fr; } }
+  .code-block { background: #0d1117; border: 1px solid #30363d; border-radius: 10px; overflow: hidden; }
+  .code-block .code-header { background: #161b22; padding: 10px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #30363d; }
+  .code-block .code-header .dot-r { width: 12px; height: 12px; border-radius: 50%; background: #f85149; }
+  .code-block .code-header .dot-y { width: 12px; height: 12px; border-radius: 50%; background: #d29922; }
+  .code-block .code-header .dot-g { width: 12px; height: 12px; border-radius: 50%; background: #3fb950; }
+  .code-block .code-header .fname { margin-left: 8px; font-family: monospace; font-size: 13px; color: #8b949e; }
+  .code-block pre { padding: 16px; font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 12px; line-height: 1.7; overflow-x: auto; color: #c9d1d9; }
+  .code-block pre .key { color: #ff7b72; }
+  .code-block pre .str { color: #a5d6ff; }
+  .code-block pre .comment { color: #8b949e; font-style: italic; }
+  .code-block pre .num { color: #79c0ff; }
+
+  /* Connector roadmap */
+  .connector-section { margin-bottom: 40px; }
+  .connector-section h2 { font-size: 22px; color: #fff; margin-bottom: 8px; }
+  .connector-section .intro { font-size: 14px; color: #8892b0; margin-bottom: 24px; line-height: 1.6; }
+  .connector-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 800px) { .connector-grid { grid-template-columns: repeat(2, 1fr); } }
+  .conn-card { background: #16213e; border: 1px dashed #475569; border-radius: 8px; padding: 14px 18px; display: flex; align-items: center; gap: 12px; }
+  .conn-card .conn-icon { font-size: 22px; width: 36px; text-align: center; }
+  .conn-card .conn-info .conn-name { font-size: 13px; font-weight: 600; color: #cbd5e1; }
+  .conn-card .conn-info .conn-desc { font-size: 11px; color: #64748b; }
+  .conn-card .conn-badge { margin-left: auto; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+  .conn-card .conn-badge.phase2 { color: #f59e0b; background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); }
+  .conn-card .conn-badge.phase3 { color: #06b6d4; background: rgba(6,182,212,0.15); border: 1px solid rgba(6,182,212,0.3); }
+
+  /* Equation bar */
+  .equation { background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1)); border: 1px solid #334155; border-radius: 12px; padding: 28px; text-align: center; margin-bottom: 48px; }
+  .equation .eq-text { font-size: 18px; color: #e0e0e0; font-weight: 500; }
+  .equation .eq-text .highlight { color: #667eea; font-weight: 700; }
+  .equation .eq-text .result { color: #4ade80; font-weight: 700; }
+  .equation .eq-sub { font-size: 13px; color: #8892b0; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="badge">ORGANIZATION KNOWLEDGE</div>
+    <h1>Your Company DNA, Structured for AI</h1>
+    <div class="subtitle">Configure once. Personalize every proposal. The more you fill in, the fewer placeholders — and the more your proposals sound like your best writers wrote them.</div>
+  </div>
+
+  <!-- Equation -->
+  <div class="equation">
+    <div class="eq-text"><span class="highlight">RFP Document</span> + <span class="highlight">Org-Knowledge YAML</span> + <span class="highlight">AI Skills</span> = <span class="result">Personalized Proposal in Minutes</span></div>
+    <div class="eq-sub">90% complete org-knowledge = ~5 placeholders per proposal &nbsp;|&nbsp; 50% complete = ~20 placeholders</div>
+  </div>
+
+  <!-- Data flow: Today vs. Future -->
+  <div class="phase-row">
+    <span class="phase-label now">Phase 1 — Today (YAML Files)</span>
+    <span class="phase-label next">Phase 2 — Coming (Live Connectors)</span>
+  </div>
+  <div class="flow">
+    <div class="flow-box active">
+      <div class="icon">📄</div>
+      <div class="label">YAML Files</div>
+      <div class="sublabel">Edit locally, version-controlled</div>
+    </div>
+    <div class="flow-arrow">+</div>
+    <div class="flow-box future">
+      <div class="icon">☁️</div>
+      <div class="label">SharePoint / OneDrive</div>
+      <div class="sublabel">Auto-pull case studies & bios</div>
+    </div>
+    <div class="flow-arrow future">+</div>
+    <div class="flow-box future">
+      <div class="icon">🔗</div>
+      <div class="label">CRM / Salesforce</div>
+      <div class="sublabel">Client data & opportunity context</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box active" style="border-color: #4ade80;">
+      <div class="icon">📋</div>
+      <div class="label" style="color: #4ade80;">Proposal</div>
+      <div class="sublabel">Pre-filled with your org data</div>
+    </div>
+  </div>
+
+  <!-- 8 YAML files grid -->
+  <div class="yaml-grid">
+    <div class="yaml-card">
+      <div class="filename"><span class="dot"></span> company-profile.yaml</div>
+      <div class="desc">Name, address, DUNS, CAGE, elevator pitch, core values, registration IDs</div>
+      <div class="feeds"><strong>Feeds →</strong> Cover letter, Exec Summary, Compliance</div>
+      <div class="fill-bar"><div class="fill high" style="width: 95%"></div></div>
+    </div>
+    <div class="yaml-card">
+      <div class="filename"><span class="dot"></span> capabilities.yaml</div>
+      <div class="desc">Service lines, tech stack, certifications (ISO, SOC 2, CMMI), clearances</div>
+      <div class="feeds"><strong>Feeds →</strong> Technical Approach</div>
+      <div class="fill-bar"><div class="fill high" style="width: 85%"></div></div>
+    </div>
+    <div class="yaml-card">
+      <div class="filename"><span class="dot"></span> methodology.yaml</div>
+      <div class="desc">Agile/Waterfall framework, sprint cadence, QA approach, PM tools</div>
+      <div class="feeds"><strong>Feeds →</strong> Management Approach</div>
+      <div class="fill-bar"><div class="fill high" style="width: 90%"></div></div>
+    </div>
+    <div class="yaml-card">
+      <div class="filename"><span class="dot"></span> differentiators.yaml</div>
+      <div class="desc">Win themes with evidence, competitive advantages, awards, partnerships</div>
+      <div class="feeds"><strong>Feeds →</strong> All sections (win theme threading)</div>
+      <div class="fill-bar"><div class="fill high" style="width: 80%"></div></div>
+    </div>
+    <div class="yaml-card">
+      <div class="filename"><span class="dot"></span> case-studies.yaml</div>
+      <div class="desc">Past projects with outcomes, technologies, relevance tags, references</div>
+      <div class="feeds"><strong>Feeds →</strong> Past Performance</div>
+      <div class="fill-bar"><div class="fill med" style="width: 60%"></div></div>
+    </div>
+    <div class="yaml-card">
+      <div class="filename"><span class="dot"></span> team-bios.yaml</div>
+      <div class="desc">Key personnel: roles, certs, clearances, experience, education</div>
+      <div class="feeds"><strong>Feeds →</strong> Staffing Plan</div>
+      <div class="fill-bar"><div class="fill med" style="width: 55%"></div></div>
+    </div>
+    <div class="yaml-card">
+      <div class="filename"><span class="dot"></span> pricing-templates.yaml</div>
+      <div class="desc">Rate cards, labor categories, pricing models, discount policies</div>
+      <div class="feeds"><strong>Feeds →</strong> Pricing Summary</div>
+      <div class="fill-bar"><div class="fill low" style="width: 30%"></div></div>
+    </div>
+    <div class="yaml-card">
+      <div class="filename"><span class="dot"></span> legal-boilerplate.yaml</div>
+      <div class="desc">Standard T&C, insurance coverage, compliance statements</div>
+      <div class="feeds"><strong>Feeds →</strong> Appendices, T&C</div>
+      <div class="fill-bar"><div class="fill low" style="width: 40%"></div></div>
+    </div>
+  </div>
+
+  <!-- Code preview: two YAML files side by side -->
+  <div class="code-section">
+    <div class="code-block">
+      <div class="code-header">
+        <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+        <span class="fname">differentiators.yaml</span>
+      </div>
+      <pre><span class="comment"># Win themes threaded across all proposal sections</span>
+<span class="key">win_themes:</span>
+  - <span class="key">theme:</span> <span class="str">"Proven Federal Delivery — On Time, On Budget"</span>
+    <span class="key">evidence:</span> <span class="str">"94% on-time delivery across 41 task orders"</span>
+    <span class="key">applicable_to:</span>
+      - <span class="str">"cloud modernization"</span>
+      - <span class="str">"any federal IT acquisition"</span>
+
+  - <span class="key">theme:</span> <span class="str">"Security First, Not Security Last"</span>
+    <span class="key">evidence:</span> <span class="str">"87-day ATO; zero breaches across portfolio"</span>
+
+  - <span class="key">theme:</span> <span class="str">"Teams That Stay — Zero Disruptive Turnover"</span>
+    <span class="key">evidence:</span> <span class="str">"96% annual retention rate"</span>
+
+<span class="key">competitive_advantages:</span>
+  - <span class="key">advantage:</span> <span class="str">"FedRAMP-Experienced, Not FedRAMP-Naive"</span>
+    <span class="key">proof_points:</span>
+      - <span class="str">"9 FedRAMP authorizations (3 High, 6 Moderate)"</span>
+      - <span class="str">"103-day avg time-to-ATO vs. 210-day average"</span></pre>
+    </div>
+    <div class="code-block">
+      <div class="code-header">
+        <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+        <span class="fname">case-studies.yaml</span>
+      </div>
+      <pre><span class="comment"># Auto-matched by relevance tags to RFP industry</span>
+<span class="key">case_studies:</span>
+  - <span class="key">project_name:</span> <span class="str">"Enterprise Data Lake & Analytics"</span>
+    <span class="key">client_name:</span> <span class="str">"U.S. Department of Veterans Affairs"</span>
+    <span class="key">contract_value:</span> <span class="str">"$7.4M"</span>
+    <span class="key">contract_type:</span> <span class="str">"FFP"</span>
+    <span class="key">key_outcomes:</span>
+      - <span class="key">metric:</span> <span class="str">"Claims research time"</span>
+        <span class="key">result:</span> <span class="str">"52% reduction"</span>
+      - <span class="key">metric:</span> <span class="str">"Time to ATO"</span>
+        <span class="key">result:</span> <span class="str">"87 days (vs. 210 avg)"</span>
+    <span class="key">relevance_tags:</span>
+      - <span class="str">"federal government"</span>
+      - <span class="str">"data analytics"</span>
+      - <span class="str">"cloud migration"</span>
+      - <span class="str">"healthcare data"</span>
+    <span class="key">reference_contact:</span>
+      <span class="key">name:</span> <span class="str">"Marcus Delgado"</span>
+      <span class="key">title:</span> <span class="str">"COR / Program Director, VBA IT"</span>
+    <span class="key">cpars_rating:</span> <span class="str">"Exceptional"</span></pre>
+    </div>
+  </div>
+
+  <!-- Future connectors -->
+  <div class="connector-section">
+    <h2>Roadmap: From YAML to Live Connectors</h2>
+    <div class="intro">Today, org-knowledge lives in version-controlled YAML files you edit locally. Coming soon: live connectors that pull knowledge directly from the tools your team already uses — so case studies, team bios, and client data stay automatically in sync.</div>
+    <div class="connector-grid">
+      <div class="conn-card">
+        <div class="conn-icon">📁</div>
+        <div class="conn-info">
+          <div class="conn-name">SharePoint / OneDrive</div>
+          <div class="conn-desc">Pull case studies & proposals from doc libraries</div>
+        </div>
+        <div class="conn-badge phase2">Phase 2</div>
+      </div>
+      <div class="conn-card">
+        <div class="conn-icon">👤</div>
+        <div class="conn-info">
+          <div class="conn-name">HR / Workday</div>
+          <div class="conn-desc">Auto-sync team bios, certs, clearances</div>
+        </div>
+        <div class="conn-badge phase2">Phase 2</div>
+      </div>
+      <div class="conn-card">
+        <div class="conn-icon">💼</div>
+        <div class="conn-info">
+          <div class="conn-name">Salesforce / HubSpot</div>
+          <div class="conn-desc">Client data, opportunity context, history</div>
+        </div>
+        <div class="conn-badge phase2">Phase 2</div>
+      </div>
+      <div class="conn-card">
+        <div class="conn-icon">📝</div>
+        <div class="conn-info">
+          <div class="conn-name">Confluence / Notion</div>
+          <div class="conn-desc">Methodology docs, process wikis</div>
+        </div>
+        <div class="conn-badge phase2">Phase 2</div>
+      </div>
+      <div class="conn-card">
+        <div class="conn-icon">📊</div>
+        <div class="conn-info">
+          <div class="conn-name">Past Proposal Corpus</div>
+          <div class="conn-desc">Learn winning language from past wins</div>
+        </div>
+        <div class="conn-badge phase3">Phase 3</div>
+      </div>
+      <div class="conn-card">
+        <div class="conn-icon">🏆</div>
+        <div class="conn-info">
+          <div class="conn-name">Win/Loss Intelligence</div>
+          <div class="conn-desc">Track outcomes, learn patterns, flag risk</div>
+        </div>
+        <div class="conn-badge phase3">Phase 3</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
