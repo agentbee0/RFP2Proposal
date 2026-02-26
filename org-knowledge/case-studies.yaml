@@ -1,0 +1,44 @@
+# Case Studies — Past performance and project references
+# Used in: Past performance section (2-3 matched per proposal)
+# Tip: Add relevance_tags to help the plugin match studies to RFP industries
+# Run /setup-org for interactive setup or edit this file directly
+
+case_studies:
+  # - project_name: "Healthcare Data Platform"
+  #   client_name: "Major US Hospital Network"
+  #   client_agency: ""                    # For government clients
+  #   contract_number: ""
+  #   contract_type: "T&M"                 # FFP, T&M, CPFF, CPIF
+  #   contract_value: "$2.5M"
+  #   period_of_performance:
+  #     start: "2024-01"
+  #     end: "2024-09"
+  #   project_description: >
+  #     Built a unified patient data platform integrating 12 legacy systems
+  #     into a modern microservices architecture with real-time analytics.
+  #   technologies_used:
+  #     - "React"
+  #     - "Node.js"
+  #     - "AWS"
+  #     - "PostgreSQL"
+  #     - "HIPAA-compliant infrastructure"
+  #   team_size: 12
+  #   key_outcomes:
+  #     - metric: "Data retrieval time"
+  #       result: "40% reduction"
+  #     - metric: "System uptime"
+  #       result: "99.99%"
+  #     - metric: "Compliance"
+  #       result: "Full HIPAA compliance achieved"
+  #   relevance_tags:                      # Used for RFP matching
+  #     - "healthcare"
+  #     - "data platform"
+  #     - "HIPAA"
+  #     - "microservices"
+  #     - "legacy modernization"
+  #   reference_contact:
+  #     name: ""
+  #     title: ""
+  #     email: ""
+  #     phone: ""
+  #   cpars_rating: ""                     # If applicable (Exceptional, Very Good, etc.)

@@ -1,0 +1,39 @@
+# Team Bios — Key personnel and subject matter experts
+# Used in: Staffing plan, key personnel resumes, org chart
+# Run /setup-org for interactive setup or edit this file directly
+
+key_personnel:
+  # - name: "Jane Smith"
+  #   proposed_role: "Project Manager"       # Role proposed for RFP responses
+  #   current_title: "Senior Project Manager"
+  #   years_experience: 12
+  #   education:
+  #     - degree: "M.S. Computer Science"
+  #       institution: "MIT"
+  #       year: 2014
+  #     - degree: "B.S. Information Systems"
+  #       institution: "Georgia Tech"
+  #       year: 2012
+  #   certifications:                        # Professional certifications
+  #     - "PMP"
+  #     - "CSM (Certified ScrumMaster)"
+  #     - "AWS Solutions Architect"
+  #   clearance_level: ""                    # Security clearance if applicable
+  #   bio_short: >
+  #     12+ years managing enterprise software projects with a track record
+  #     of on-time, on-budget delivery across healthcare and financial services.
+  #   bio_full: >
+  #     Jane Smith brings 12+ years of experience managing complex software
+  #     development projects for Fortune 500 clients and federal agencies.
+  #     She has successfully led teams of up to 30 engineers, delivering
+  #     mission-critical systems in healthcare, financial services, and
+  #     government sectors. Jane is PMP-certified and holds an M.S. in
+  #     Computer Science from MIT.
+  #   relevant_experience:
+  #     - project: "Healthcare Data Platform"
+  #       role: "Project Manager"
+  #       description: "Led 12-person team delivering a HIPAA-compliant platform"
+  #     - project: "Financial Analytics Dashboard"
+  #       role: "Program Manager"
+  #       description: "Managed $4M program with 3 concurrent workstreams"
+  #   labor_category: "Project Manager III"   # For pricing alignment

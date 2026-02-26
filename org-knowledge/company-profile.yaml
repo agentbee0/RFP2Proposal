@@ -1,0 +1,41 @@
+# Company Profile — Core organizational information
+# Used in: Cover letter, executive summary, company description sections
+# Run /setup-org for interactive setup or edit this file directly
+
+company_name: ""                    # Display name (e.g., "Acme Software Solutions")
+legal_name: ""                      # Full legal entity name
+dba: ""                             # "Doing Business As" if different
+website: ""
+email_general: ""
+phone: ""
+
+address:
+  street: ""
+  city: ""
+  state: ""
+  zip: ""
+  country: ""
+
+# Registration identifiers (for government proposals)
+duns_number: ""                     # DUNS number
+cage_code: ""                       # CAGE code
+uei: ""                             # Unique Entity Identifier (SAM.gov)
+naics_codes:                        # NAICS codes your company operates under
+  # - code: "541511"
+  #   description: "Custom Computer Programming Services"
+  #   small_business: true          # Whether you qualify as small for this NAICS
+
+# Socioeconomic set-aside categories (if applicable)
+set_aside_categories: []            # e.g., ["8(a)", "HUBZone", "SDVOSB", "WOSB"]
+
+# Company overview
+founded_year: ""
+employee_count: ""
+annual_revenue_range: ""            # e.g., "$10M-$50M"
+headquarters_location: ""
+
+# Narrative descriptions
+elevator_pitch: ""                  # 2-3 sentence company summary
+mission_statement: ""
+vision_statement: ""
+core_values: []                     # e.g., ["Innovation", "Quality", "Integrity"]

@@ -1,0 +1,34 @@
+# Differentiators — Win themes and competitive advantages
+# Used in: Throughout all proposal sections (win theme threading)
+# Run /setup-org for interactive setup or edit this file directly
+
+win_themes:                                # Core themes woven throughout proposals
+  # - theme: "Proven Agile Delivery"
+  #   description: "We deliver working software every 2 weeks with zero surprise delays"
+  #   evidence: "100% on-time delivery across last 20 projects"
+  #   applicable_to:                       # RFP types where this theme resonates
+  #     - "software development"
+  #     - "application modernization"
+  #     - "digital transformation"
+
+competitive_advantages:
+  # - advantage: "Zero-attrition dedicated teams"
+  #   description: "Our team retention rate is 98% — your team stays your team"
+  #   proof_points:
+  #     - "98% annual retention rate across all client engagements"
+  #     - "Average team tenure of 3.2 years on long-term contracts"
+
+awards_and_recognition:
+  # - name: "Inc. 5000 Fastest Growing Companies"
+  #   year: 2025
+  #   issuing_body: "Inc. Magazine"
+
+partnerships:
+  # - partner_name: "AWS"
+  #   partnership_level: "Advanced Consulting Partner"
+  #   relevance: "Deep cloud infrastructure expertise with priority AWS support"
+
+unique_capabilities:
+  # - capability: "AI-Assisted Development"
+  #   description: "Proprietary AI tooling that accelerates development by 30%"
+  #   how_it_helps_clients: "Faster delivery without compromising quality"

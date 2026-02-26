@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "docx-generator": {
+      "command": "npx",
+      "args": ["tsx", "servers/docx-generator/src/index.ts"]
+    }
+  }
+}

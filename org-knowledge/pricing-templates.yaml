@@ -1,0 +1,33 @@
+# Pricing Templates — Rate structures and pricing models
+# Used in: Pricing summary, cost volumes
+# Note: Actual pricing always requires human review (REQUIRED placeholders)
+# Run /setup-org for interactive setup or edit this file directly
+
+pricing_models:
+  # - model_type: "T&M"                    # Time & Materials
+  #   description: "Hourly billing with monthly invoicing, not-to-exceed ceiling"
+  # - model_type: "FFP"                    # Firm Fixed Price
+  #   description: "Fixed price per deliverable with milestone-based payments"
+  # - model_type: "CPFF"                   # Cost Plus Fixed Fee
+  #   description: "Reimbursable costs plus negotiated fixed fee"
+
+labor_rates:                               # Standard rate card
+  # - labor_category: "Senior Developer"
+  #   hourly_rate: ""                       # Your standard hourly rate
+  #   annual_rate: ""                       # Annual equivalent
+  #   gsa_rate: ""                          # GSA schedule rate if applicable
+
+overhead_rates:                            # Indirect rates
+  fringe_rate: ""                          # Fringe benefit rate (e.g., "32%")
+  overhead_rate: ""                        # Overhead rate (e.g., "45%")
+  g_and_a_rate: ""                         # G&A rate (e.g., "12%")
+  fee_percentage: ""                       # Profit/fee percentage (e.g., "8%")
+
+travel_rates:
+  per_diem_policy: ""                      # e.g., "GSA per diem rates"
+  mileage_rate: ""                         # e.g., "IRS standard mileage rate"
+  airfare_class: ""                        # e.g., "Coach/economy class"
+
+discount_policies:
+  volume_discount: ""                      # e.g., "5% discount for contracts over $1M"
+  multi_year_discount: ""                  # e.g., "3% discount for 3+ year engagements"

@@ -1,0 +1,30 @@
+# Legal Boilerplate — Standard contract terms and legal text
+# Used in: Terms & conditions, appendices
+# Run /setup-org for interactive setup or edit this file directly
+
+terms_and_conditions:
+  standard_terms: ""                       # Your standard contract terms
+  limitation_of_liability: ""              # Liability cap language
+  indemnification: ""                      # Indemnification clause
+  intellectual_property: ""                # IP ownership and rights
+  data_rights: ""                          # Data rights and ownership
+  termination_clause: ""                   # Termination for convenience/cause
+  dispute_resolution: ""                   # Mediation/arbitration/litigation
+
+insurance:
+  general_liability:
+    coverage_amount: ""                    # e.g., "$2M per occurrence"
+    carrier: ""
+  professional_liability:
+    coverage_amount: ""                    # e.g., "$5M aggregate"
+    carrier: ""
+  cyber_liability:
+    coverage_amount: ""                    # e.g., "$5M per claim"
+    carrier: ""
+  workers_comp: ""                         # e.g., "Statutory limits in all operating states"
+
+compliance_statements:
+  equal_opportunity: ""                    # EEO/affirmative action statement
+  section_508: ""                          # Accessibility compliance statement
+  data_privacy: ""                         # Data privacy/protection statement
+  export_controls: ""                      # Export control compliance

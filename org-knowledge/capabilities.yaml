@@ -1,0 +1,33 @@
+# Capabilities — Technical and service competencies
+# Used in: Technical approach, capability statements
+# Run /setup-org for interactive setup or edit this file directly
+
+service_lines:                      # Your main service offerings
+  # - name: "Custom Software Development"
+  #   description: "End-to-end development of bespoke software solutions"
+  #   key_technologies: ["React", "Node.js", "Python", "AWS"]
+  #   certifications: ["AWS Advanced Partner"]
+
+technology_stack:
+  languages: []                     # e.g., ["TypeScript", "Python", "Java", "Go"]
+  frameworks: []                    # e.g., ["React", "Next.js", "Django", "Spring Boot"]
+  cloud_platforms: []               # e.g., ["AWS", "Azure", "GCP"]
+  databases: []                     # e.g., ["PostgreSQL", "MongoDB", "Redis"]
+  devops_tools: []                  # e.g., ["Docker", "Kubernetes", "Terraform", "GitHub Actions"]
+  security_tools: []                # e.g., ["SonarQube", "Snyk", "OWASP ZAP"]
+
+certifications:                     # Organizational certifications
+  # - name: "ISO 27001"
+  #   issuing_body: "BSI"
+  #   valid_through: "2027-12-31"
+
+security_clearances:
+  facility_clearance: ""            # e.g., "SECRET"
+  personnel_clearances:             # Cleared staff availability
+    # - level: "SECRET"
+    #   count: 15
+
+contract_vehicles:                  # Government contract vehicles
+  # - name: "GSA MAS"
+  #   contract_number: "GS-35F-XXXX"
+  #   ordering_guide: "https://..."

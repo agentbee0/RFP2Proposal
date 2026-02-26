@@ -1,0 +1,44 @@
+# Methodology — Delivery and project management approach
+# Used in: Management approach, project methodology sections
+# Run /setup-org for interactive setup or edit this file directly
+
+delivery_methodology:
+  name: ""                          # e.g., "Agile/Scrum", "SAFe", "Hybrid Agile-Waterfall"
+  description: ""                   # Brief overview of your approach
+  phases:                           # Standard project phases
+    # - name: "Discovery & Planning"
+    #   description: "Requirements analysis, architecture design, project planning"
+    #   key_activities: ["Stakeholder interviews", "Requirements workshops", "Architecture design"]
+    #   deliverables: ["Requirements Document", "Architecture Design", "Project Plan"]
+    #   typical_duration: "2-4 weeks"
+    # - name: "Development"
+    #   description: "Iterative development in 2-week sprints"
+    #   key_activities: ["Sprint planning", "Development", "Code review", "Testing"]
+    #   deliverables: ["Working software increments", "Sprint reports"]
+    #   typical_duration: "8-16 weeks"
+
+sdlc_approach:
+  name: ""                          # e.g., "Iterative SDLC"
+  description: ""
+
+project_management:
+  framework: ""                     # e.g., "PMI/PMBOK", "PRINCE2"
+  tools: []                         # e.g., ["Jira", "Confluence", "MS Project"]
+  reporting_cadence: ""             # e.g., "Weekly status reports, monthly executive summaries"
+  governance_structure: ""          # e.g., "Steering committee, change control board"
+
+quality_assurance:
+  approach: ""                      # e.g., "Shift-left testing with automated CI/CD"
+  testing_methodology: ""           # e.g., "Unit, integration, E2E, performance, security testing"
+  code_review_process: ""           # e.g., "All PRs require peer review before merge"
+  defect_management: ""             # e.g., "Jira-based defect tracking with SLA-driven resolution"
+
+risk_management:
+  approach: ""                      # e.g., "Proactive risk identification with monthly reviews"
+  risk_categories: []               # e.g., ["Technical", "Schedule", "Resource", "External"]
+  mitigation_strategies: []         # e.g., ["Prototyping for technical risks", "Buffer time for schedule risks"]
+
+transition_approach:
+  incoming: ""                      # How you handle transition-in from incumbents
+  outgoing: ""                      # How you handle transition-out
+  knowledge_transfer: ""            # Your knowledge transfer methodology

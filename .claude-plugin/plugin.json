@@ -1,0 +1,8 @@
+{
+  "name": "rfp2proposal",
+  "version": "1.0.0",
+  "description": "Analyze RFPs and generate professional proposals with smart placeholders, compliance checklists, and .docx export. Drop in an RFP, get a proposal draft in minutes.",
+  "author": {
+    "name": "RFP2Proposal Contributors"
+  }
+}

@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.js
+*.d.ts
+*.js.map
+!src/**
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Input RFPs (may contain sensitive client data)
+input/*
+!input/.gitkeep
+
+# Generated output
+output/
+*.docx
+*.xlsx
+*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code
+.claude/
+
